@@ -125,6 +125,7 @@ def main():
 		# submit button
 		clickSubmit = st.button("Submit")
 		d={'Question1':my_text, 'Question2':my_text1, 'is_duplicate':id_is}
+		d=d.append(d)
 		
 		df = pd.DataFrame(data=d,index=[0])
 
@@ -132,14 +133,14 @@ def main():
 			#df = pd.DataFrame(data=d)
 			#df = df.append(d, ignore_index = True)
 			st.write(df)
-			open('df.csv', 'w').write(df.to_csv())
+			#open('df.csv', 'w').write(df.to_csv())
 			#st.write(my_text,my_text1,id_is)
 			# text_downloader(my_text)
 			#data={'Question1':my_text, 'Question2':my_text1, 'is_duplicate':id_is}
 			#data = data.append(data)
 			#df_fin=pd.DataFrame(data, index=[0])
 			#df = df.append(pd.DataFrame(data=d))
-			#download = FileDownloader(df_fin).csv_downloader(df_fin)
+			download = FileDownloader(df).csv_downloader(df)
 
 
 	else:
