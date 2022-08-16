@@ -138,7 +138,7 @@ def main():
 			#data={'Question1':my_text, 'Question2':my_text1, 'is_duplicate':id_is}
 			#data = data.append(data)
 			#df_fin=pd.DataFrame(data, index=[0])
-			df = df.append(pd.DataFrame(data=d))
+			#df = df.append(pd.DataFrame(data=d))
 			download = FileDownloader(df).csv_downloader(df)
 
 
